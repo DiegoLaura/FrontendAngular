@@ -1,0 +1,49 @@
+<body>
+    <div class="container">
+        <input type="checkbox" id="register_toggle">
+        <div class="slider">
+            <form class="form" (ngSubmit)="login()" id="login_form">
+                <span class="title">Login</span>
+                <div class="form_control">
+                    <input [(ngModel)]="loginData.nombre" name="nombre" type="text" class="input" required>
+                    <label class="label">Nombre</label>
+                </div>
+                <div class="form_control">
+                    <input [(ngModel)]="loginData.contrasena" name="contrasena" type="password" class="input" required>
+                    <label class="label">Password</label>
+                </div>
+                <button type="submit">Login</button>
+
+                <span class="bottom_text">Don't have an account? <label
+                        for="register_toggle" class="switch">Sign
+                        Up</label><br><br><br>
+                    <a class="volver" href="/">
+                        <i class="fas fa-arrow-left"></i>
+                    </a></span>
+            </form>
+            <form class="form" (ngSubmit)="register()" id="signup_form">
+                <span class="title">Sign Up</span>
+                <div class="form_control">
+                    <input [(ngModel)]="registerData.nombre" name="nombre" type="text" class="input" required>
+                    <label class="label">Nombre</label>
+                </div>
+                <div class="form_control">
+                    <input [(ngModel)]="registerData.correo" name="correo" type="email" class="input" required>
+                    <label class="label">Correo</label>
+                </div>
+                <div class="form_control">
+                    <input [(ngModel)]="registerData.contrasena" name="contrasena" type="password" class="input" required>
+                    <label class="label">Password</label>
+                </div>
+                <button type="submit">Sign Up</button>
+
+                <span class="bottom_text">Already have an account? <label
+                        for="register_toggle" class="switch">Sign
+                        In</label><br><br>
+                    <a class="volver" href="/">
+                        <i class="fas fa-arrow-left"></i>
+                    </a></span>
+            </form>
+        </div>
+    </div>
+</body>
