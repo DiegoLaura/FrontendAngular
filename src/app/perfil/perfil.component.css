@@ -1,10 +1,11 @@
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
 html {
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     text-size-adjust: 100%;
     line-height: 1.4;
 }
-
 
 * {
     margin: 0;
@@ -40,8 +41,25 @@ body {
     position: relative;
     width: 90%;
     height: 17rem;
-    background-image: linear-gradient(45deg, #BC3CFF, #317FFF);
+    /* Elimina el fondo gradiente anterior */
+    background-color: #ECECEC; /* Puedes ajustar el color según tu preferencia */
     border-radius: 0 0 20px 20px;
+    overflow: hidden; /* Para ocultar cualquier contenido que se desborde */
+}
+
+.seccion-perfil-usuario .perfil-usuario-portada .portada-container {
+    position: relative;
+    overflow: hidden;
+    max-height: 200px;  /* Ajusta según sea necesario */
+    width: 100%;
+}
+
+.seccion-perfil-usuario .perfil-usuario-portada .foto-portada {
+    width: 100%;
+    height: auto;
+    display: block;
+    z-index: 1;
+    object-fit: cover;  /* Ajusta según sea necesario */
 }
 
 .seccion-perfil-usuario .perfil-usuario-portada .boton-portada {
@@ -67,13 +85,12 @@ body {
     align-items: center;
     justify-content: center;
     border: 7px solid #FFFFFF;
-    background-color: #DFE5F2;
     border-radius: 50%;
     box-shadow: 0 0 12px rgba(0, 0, 0, .2);
     position: absolute;
     bottom: -40px;
     left: calc(50% - 90px);
-    z-index: 1;
+    z-index: 2;
 }
 
 .seccion-perfil-usuario .perfil-usuario-avatar img {
@@ -81,6 +98,12 @@ body {
     position: relative;
     border-radius: 50%;
 }
+
+.seccion-perfil-usuario .perfil-usuario-avatar .default-icon {
+    font-size: 3em; /* Ajusta según sea necesario */
+    color: #555; /* Cambia el color predeterminado */
+}
+
 
 .seccion-perfil-usuario .perfil-usuario-avatar .boton-avatar {
     position: absolute;
@@ -96,7 +119,7 @@ body {
 }
 
 .seccion-perfil-usuario .perfil-usuario-body {
-    width: 70%;
+    width: 80%;
     position: relative;
     max-width: 750px;
 }

@@ -26,7 +26,21 @@ export class AuthService {
     );
   }
 
+  logout() {
+    localStorage.removeItem('usuarioDatos');
+  }
+
   getUserProfile(id: number): Observable<any> {
     return this.http.get<any>(`${this.apiUrl}/usuarios/${id}`);
   }
+
+  isAuthenticated(): boolean {
+    // Verifica si el usuario está autenticado
+    return !!localStorage.getItem('usuarioDatos');
+  }
+
+  getComentarios(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiUrl}/comentarios/`);
+  }
+
 }

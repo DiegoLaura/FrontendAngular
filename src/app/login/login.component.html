@@ -14,15 +14,16 @@
                 </div>
                 <button type="submit">Login</button>
 
-                <span class="bottom_text">Don't have an account? <label
-                        for="register_toggle" class="switch">Sign
-                        Up</label><br><br><br>
+                <span class="bottom_text">¿No tienes una cuenta?<label
+                        for="register_toggle" class="switch">Registrate</label><br><br><br>
                     <a class="volver" href="/">
                         <i class="fas fa-arrow-left"></i>
-                    </a></span>
+                    </a>
+
+                </span>
             </form>
             <form class="form" (ngSubmit)="register()" id="signup_form">
-                <span class="title">Sign Up</span>
+                <span class="title">Registrate</span>
                 <div class="form_control">
                     <input [(ngModel)]="registerData.nombre" name="nombre" type="text" class="input" required>
                     <label class="label">Nombre</label>
@@ -35,14 +36,12 @@
                     <input [(ngModel)]="registerData.contrasena" name="contrasena" type="password" class="input" required>
                     <label class="label">Password</label>
                 </div>
-                <button type="submit">Sign Up</button>
+                <button type="submit">Registrate</button>
 
-                <span class="bottom_text">Already have an account? <label
-                        for="register_toggle" class="switch">Sign
-                        In</label><br><br>
-                    <a class="volver" href="/">
-                        <i class="fas fa-arrow-left"></i>
-                    </a></span>
+                <span class="bottom_text">¿Ya tienes una cuenta?<br>
+                    <label for="register_toggle" class="switch">Login</label><br><br>
+                    <a class="volver" href="/"><i class="fas fa-arrow-left"></i></a>
+                </span>
             </form>
         </div>
     </div>

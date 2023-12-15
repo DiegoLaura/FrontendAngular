@@ -15,16 +15,28 @@
     <body>
         <section class="seccion-perfil-usuario">
             <div class="perfil-usuario-header">
+                <a routerLink="/">
+                    <button type="button" class="boton-home">
+                        <i class="fas fa-home fa-2x"></i>
+                    </button>
+                </a>
                 <div class="perfil-usuario-portada">
                     <div class="perfil-usuario-avatar">
-                        <button type="button" class="boton-avatar">
+                        <input type="file" #fileInput style="display: none" (change)="cambiarFotoPerfil($event)">
+                        <button type="button" class="boton-avatar" (click)="fileInput.click()">
                             <i class="far fa-image"></i>
                         </button>
+                        <img *ngIf="rutaFotoPerfil" [src]="rutaFotoPerfil" alt="Foto de perfil">
+                        <img *ngIf="!rutaFotoPerfil" class="default-icon" src="/assets/img/perfil.png" alt="Icono predeterminado">
+                    </div>                                     
+                    <div class="foto-portada-container">
+                        <input type="file" #fileInputPortada style="display: none" (change)="cambiarFotoPortada($event)">
+                        <button type="button" class="boton-portada" (click)="fileInputPortada.click()">
+                            <i class="far fa-image"></i> Cambiar fondo
+                        </button>
+                        <img *ngIf="rutaFotoPortada" [src]="rutaFotoPortada" alt="Foto de portada" class="foto-portada">
                     </div>
-                    <button type="button" class="boton-portada">
-                        <i class="far fa-image"></i> Cambiar fondo
-                    </button>
-                </div>
+                </div>                
             </div>
             <div class="perfil-usuario-body">
                 <div class="perfil-usuario-bio">
@@ -63,19 +75,7 @@
         </section>
         <div class="mis-redes"
             style="display: block;position: fixed;bottom: 1rem;left: 1rem; opacity: 0.5; z-index: 1000;">
-            <p style="font-size: .75rem;">Apock graficos</p>
-            <div>
-                <a target="_blank" href="https://www.facebook.com/ApockGraficos"><i
-                        class="fab fa-facebook-square"></i></a>
-                <a target="_blank" href="https://twitter.com/ApockGraficos"><i
-                        class="fab fa-twitter"></i></a>
-                <a target="_blank"
-                    href="https://www.instagram.com/ApockGraficos"><i
-                        class="fab fa-instagram"></i></a>
-                <a target="_blank"
-                    href="https://www.youtube.com/channel/UC15DkMZQ80aoW_Rqk4n2T_w"><i
-                        class="fab fa-youtube"></i></a>
-            </div>
+            <p style="font-size: .75rem;">SingInterpreter</p>
         </div>
     </body>
 

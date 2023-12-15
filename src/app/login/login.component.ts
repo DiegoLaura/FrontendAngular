@@ -38,7 +38,6 @@ export class LoginComponent {
       }
     );
   }
-  
 
   register() {
     this.auth.register(this.registerData).subscribe(
